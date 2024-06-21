@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-FROM alpine:latest as pre-build
+FROM openeuler/openeuler:22.03 as pre-build
 
 COPY . /usr/local/apisix-dashboard
 
@@ -46,10 +46,11 @@ COPY --from=pre-build /usr/local/apisix-dashboard .
 WORKDIR /usr/local/apisix-dashboard/web
 
 RUN if [ "$ENABLE_PROXY" = "true" ] ; then yarn config set registry https://registry.npmmirror.com/ ; fi \
+    && yarn config set strict-ssl false \
     && yarn install \
     && yarn build
 
-FROM alpine:latest as prod
+FROM openeuler/openeuler:22.03 as prod
 
 ARG ENABLE_PROXY=false
 
