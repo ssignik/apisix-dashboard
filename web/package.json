@@ -162,7 +162,7 @@
     "scripts/**/*.js"
   ],
   "resolutions": {
-    "@babel/traverse": "8.0.0-alpha.4",
+    "@babel/traverse": "7.23.2",
     "@sideway/formula": "3.0.1",
     "axios": "1.6.0",
     "braces": "3.0.3",
