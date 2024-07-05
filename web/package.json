@@ -177,7 +177,6 @@
     "minimist": "1.2.6",
     "node-fetch": "2.6.7",
     "path-parse": "1.0.7",
-    "postcss": "8.4.31",
     "semver": "5.7.2",
     "terser": "5.14.2",
     "ua-parser-js": "0.7.33",
